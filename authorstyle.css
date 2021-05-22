@@ -1,0 +1,443 @@
+﻿
+@import url('https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css');
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css");
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+
+.header-fixed {
+    background-color: #292c2f;
+    box-shadow: 0 1px 1px #ccc;
+    padding: 20px 40px;
+    height: 80px;
+    color: #ffffff;
+    box-sizing: border-box;
+    top: -100px;
+    -webkit-transition: top 0.3s;
+    transition: top 0.3s;
+}
+
+    .header-fixed .header-limiter {
+        max-width: 1200px;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+/*	The header placeholder. It is displayed when the header is fixed to the top of the
+	browser window, in order to prevent the content of the page from jumping up. */
+
+.header-fixed-placeholder {
+    height: 80px;
+    display: none;
+}
+
+/* Logo */
+
+.header-fixed .header-limiter h1 {
+    float: left;
+    font: normal 28px Cookie, Arial, Helvetica, sans-serif;
+    line-height: 40px;
+    margin: 0;
+}
+
+    .header-fixed .header-limiter h1 span {
+        color: #5383d3;
+    }
+
+/* The navigation links */
+
+.header-fixed .header-limiter a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.header-fixed .header-limiter nav {
+    font: 16px Arial, Helvetica, sans-serif;
+    line-height: 40px;
+    float: right;
+}
+
+    .header-fixed .header-limiter nav a {
+        display: inline-block;
+        padding: 0 5px;
+        text-decoration: none;
+        color: #ffffff;
+        opacity: 0.9;
+    }
+
+        .header-fixed .header-limiter nav a:hover {
+            opacity: 1;
+        }
+
+        .header-fixed .header-limiter nav a.selected {
+            color: #608bd2;
+            pointer-events: none;
+            opacity: 1;
+        }
+
+/* Fixed version of the header */
+
+body.fixed .header-fixed {
+    padding: 10px 40px;
+    height: 50px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+body.fixed .header-fixed-placeholder {
+    display: block;
+}
+
+body.fixed .header-fixed .header-limiter h1 {
+    font-size: 24px;
+    line-height: 30px;
+}
+
+body.fixed .header-fixed .header-limiter nav {
+    line-height: 28px;
+    font-size: 13px;
+}
+
+
+/* Making the header responsive */
+
+@media all and (max-width: 600px) {
+
+    .header-fixed {
+        padding: 20px 0;
+        height: 75px;
+    }
+
+        .header-fixed .header-limiter h1 {
+            float: none;
+            margin: -8px 0 10px;
+            text-align: center;
+            font-size: 24px;
+            line-height: 1;
+        }
+
+        .header-fixed .header-limiter nav {
+            line-height: 1;
+            float: none;
+        }
+
+            .header-fixed .header-limiter nav a {
+                font-size: 13px;
+            }
+
+    body.fixed .header-fixed {
+        display: none;
+    }
+}
+
+.jumbotron-billboard .img {
+    margin-bottom: 0px;
+    opacity: 0.2;
+    color: #fff;
+    background: #000 url("https://bootstrapcreative.com/wp-bc/wp-content/uploads/2017/03/learning-story.png") top center no-repeat;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.jumbotron h2 {
+    margin-top: 0;
+}
+
+.jumbotron {
+    position: relative;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+    .jumbotron .container {
+        position: relative;
+        z-index: 2;
+    }
+
+@media screen and (max-width: 768px) {
+    .jumbotron {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0
+}
+
+html {
+    height: 100%
+}
+
+p {
+    color: grey
+}
+
+#heading {
+    text-transform: uppercase;
+    color: darkblue;
+    font-weight: normal
+}
+
+#msform {
+    text-align: center;
+    position: relative;
+    margin-top: 20px
+}
+
+    #msform fieldset {
+        background: white;
+        border: 0 none;
+        border-radius: 0.5rem;
+        box-sizing: border-box;
+        width: 100%;
+        margin: 0;
+        padding-bottom: 20px;
+        position: relative
+    }
+
+.form-card {
+    text-align: left
+}
+
+#msform fieldset:not(:first-of-type) {
+    display: none
+}
+
+#msform input,
+#msform textarea,
+#msform select {
+    padding: 8px 15px 8px 15px;
+    border: 1px solid #ccc;
+    border-radius: 0px;
+    margin-bottom: 25px;
+    margin-top: 2px;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: montserrat;
+    color: #2C3E50;
+    background-color: #ECEFF1;
+    font-size: 16px;
+    letter-spacing: 1px
+}
+
+    #msform input:focus,
+    #msform textarea:focus {
+        -moz-box-shadow: none !important;
+        -webkit-box-shadow: none !important;
+        box-shadow: none !important;
+        border: 1px solid darkblue;
+        outline-width: 0
+    }
+
+#msform .action-button {
+    width: 100px;
+    background: darkblue;
+    font-weight: bold;
+    color: white;
+    border: 0 none;
+    border-radius: 0px;
+    cursor: pointer;
+    padding: 10px 5px;
+    margin: 10px 0px 10px 5px;
+    float: right
+}
+
+#msform .add-button {
+    background: #d90181;
+    font-weight: bold;
+    color: white;
+    border: 0 none;
+    border-radius: 0px;
+    cursor: pointer;
+    padding: 10px 5px;
+    margin: 10px 0px 10px 5px;
+}
+
+#msform .action-button:hover,
+#msform .action-button:focus {
+    background-color: goldenrod;
+}
+
+#msform .action-button-previous {
+    width: 100px;
+    background: #616161;
+    font-weight: bold;
+    color: white;
+    border: 0 none;
+    border-radius: 0px;
+    cursor: pointer;
+    padding: 10px 5px;
+    margin: 10px 5px 10px 0px;
+    float: right
+}
+
+    #msform .action-button-previous:hover,
+    #msform .action-button-previous:focus {
+        background-color: #000000
+    }
+
+.card {
+    z-index: 0;
+    border: none;
+    position: relative
+}
+
+@media only screen and (max-width: 500px) {
+    .fs-title {
+        font-size: 20px;
+        color: darkblue;
+        margin-bottom: 15px;
+        font-weight: normal;
+        text-align: left;
+        width: 100%;
+    }
+
+    .steps {
+        font-size: 18px;
+        color: gray;
+        margin-bottom: 10px;
+        font-weight: normal;
+        text-align: center;
+    }
+
+    #progressbar li:before {
+        width: 40px;
+        height: 40px;
+        line-height: 45px;
+        display: block;
+        font-size: 20px;
+        color: #ffffff;
+        background: lightgray;
+        border-radius: 50%;
+        margin: 0 auto 0px auto;
+        padding: 2px
+    }
+}
+
+@media only screen and (min-width: 501px) {
+    .fs-title {
+        font-size: 22px;
+        color: darkblue;
+        margin-bottom: 15px;
+        font-weight: normal;
+        text-align: left
+    }
+
+    .steps {
+        font-size: 22px;
+        color: gray;
+        margin-bottom: 10px;
+        font-weight: normal;
+        text-align: right
+    }
+
+    #progressbar li:before {
+        width: 50px;
+        height: 50px;
+        line-height: 45px;
+        display: block;
+        font-size: 20px;
+        color: #ffffff;
+        background: lightgray;
+        border-radius: 50%;
+        margin: 0 auto 10px auto;
+        padding: 2px
+    }
+
+    #progressbar li {
+        list-style-type: none;
+        font-size: 15px;
+        width: 25%;
+        float: left;
+        position: relative;
+        font-weight: 400
+    }
+}
+
+.purple-text {
+    color: darkblue;
+    font-weight: normal
+}
+
+
+.fieldlabels {
+    color: gray;
+    text-align: left
+}
+
+#progressbar {
+    margin-bottom: 30px;
+    overflow: hidden;
+    color: lightgrey
+}
+
+    #progressbar .active {
+        color: darkblue
+    }
+
+
+    #progressbar #account:before {
+        font-family: FontAwesome, sans-serif;
+        content: "\f007"
+    }
+    #progressbar #personal:before {
+        font-family: FontAwesome, sans-serif;
+        content: "\f015"
+    }
+    #progressbar #payment:before {
+        font-family: FontAwesome, sans-serif;
+        content: "\f02d"
+    }
+
+    #progressbar #confirm:before {
+        font-family: FontAwesome, serif;
+        content: "\f00c"
+    }
+
+
+    #progressbar li:after {
+        content: '';
+        width: 100%;
+        height: 2px;
+        background: lightgray;
+        position: absolute;
+        left: 0;
+        top: 25px;
+        z-index: -1
+    }
+
+    #progressbar li.active:before,
+    #progressbar li.active:after {
+        background: darkblue
+    }
+
+.progress {
+    height: 20px
+}
+
+.progress-bar {
+    background-color: darkblue
+}
+
+.fit-image {
+    width: 100%;
+    object-fit: cover
+}
+
+.reset {
+    width: 100%;
+}
+
+
+
